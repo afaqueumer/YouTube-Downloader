@@ -92,7 +92,8 @@ if url:
     prog_but = tab1.button("Download 📥", key=2)
     if prog_but:
         with st.spinner('Downloading...'):
-            v_info['stream'].download(output_path="downloads/", filename= basic_file_name)
+            saved_path = v_info['stream'].download( filename = basic_file_name) #output_path="downloads/",
+        st.write(saved_path)
         st.success('Download Complete', icon="✅")       
         st.balloons()
         
