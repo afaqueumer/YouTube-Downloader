@@ -94,6 +94,10 @@ if url:
         with st.spinner('Downloading...'):
             saved_path = v_info['stream'].download( filename = basic_file_name) #output_path="downloads/",
         st.write(saved_path)
+        try:
+            st.download_button(label="Download to local", data=f"/app/youtube-downloader/{basic_file_name}", file_name = basic_file_name)
+        except:
+            st.write("Something went wrong")
         st.success('Download Complete', icon="✅")       
         st.balloons()
         
