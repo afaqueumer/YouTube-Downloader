@@ -58,7 +58,7 @@ if url:
             st.write(f"__Resolution:__ {v_info['resolutions'][id]}")
             st.write(f"__Frame Rate:__ {v_info['fps'][id]}")
             st.write(f"__Format:__ {v_info['format'][id]}")
-            file_name = st.text_input('__Save as 🎯__', placeholder = v_info['title'])
+            file_name = st.text_input('__Save as 🎯__', value = v_info['title'].replace(" ", "_"))
             if file_name:        
                 if file_name != v_info['title']:
                     file_name+=".mp4"
